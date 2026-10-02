@@ -618,6 +618,38 @@ html.dark {
   overflow-x: auto;
 }
 
+/* Frontmatter as properties (read view; raw YAML on click) */
+.prose .frontmatter-props {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  cursor: text;
+}
+.prose .frontmatter-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+.prose .frontmatter-key {
+  color: var(--color-text-muted);
+}
+.prose .frontmatter-value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  color: var(--color-text);
+}
+.prose .frontmatter-chip {
+  background-color: var(--color-bg-muted);
+  border-radius: 0.375rem;
+  padding: 0 0.5rem;
+}
+
 /* Links - solid bottom border, muted at rest */
 .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--color-text);
